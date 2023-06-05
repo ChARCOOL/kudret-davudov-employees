@@ -1,0 +1,51 @@
+{
+	"name": "kudret-davudov-employees",
+	"version": "1.0.0",
+	"description": "Identify the pair of employees who have worked together on common projects for the longest period of time",
+	"author": "Kudret Davudov",
+	"license": "MIT",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"test": "vitest",
+		"lint": "eslint --ext .js,.cjs,.ts,.tsx .",
+		"lint:fix": "eslint --ext .js,.cjs,.ts,.tsx . --fix",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.11.0",
+		"@emotion/styled": "^11.11.0",
+		"@mui/icons-material": "^5.11.16",
+		"@mui/material": "^5.13.4",
+		"csv-parse": "^5.4.0",
+		"mui-file-dropzone": "^4.0.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@mui/x-data-grid": "^6.6.0",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^14.0.0",
+		"@testing-library/react-hooks": "^8.0.1",
+		"@types/react": "^18.2.8",
+		"@types/react-dom": "^18.2.4",
+		"@typescript-eslint/eslint-plugin": "^5.59.8",
+		"@typescript-eslint/parser": "^5.59.8",
+		"@vitejs/plugin-react": "^4.0.0",
+		"eslint": "^8.42.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"jsdom": "^22.1.0",
+		"prettier": "^2.8.8",
+		"typescript": "^5.1.3",
+		"vite": "^4.3.9",
+		"vitest": "^0.31.4"
+	}
+}
