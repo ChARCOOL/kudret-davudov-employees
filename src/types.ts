@@ -1,3 +1,5 @@
+import { Dayjs } from 'dayjs'
+
 export interface EmployeePair {
 	id: string
 	empID1: number
@@ -9,6 +11,6 @@ export interface EmployeePair {
 export interface Project {
 	empID: number
 	projectID: number
-	dateFrom: Date
-	dateTo: Date
+	dateFrom: Dayjs
+	dateTo: Dayjs
 }

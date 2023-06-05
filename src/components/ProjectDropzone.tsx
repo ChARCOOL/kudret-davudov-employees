@@ -3,6 +3,7 @@ import { DropzoneArea } from 'mui-file-dropzone'
 import { useCallback } from 'react'
 import { Project } from '../types'
 import { useProjectContext } from '../contexts/ProjectContext'
+import dayjs from 'dayjs'
 
 const ProjectDropzone = () => {
 	const { projects, setProjects } = useProjectContext()
@@ -34,8 +35,8 @@ const ProjectDropzone = () => {
 				return {
 					empID: parseInt(row[empIDIdx]),
 					projectID: parseInt(row[projectIDIdx]),
-					dateFrom: new Date(row[dateFromIdx]),
-					dateTo: row[dateToIdx] !== 'NULL' ? new Date(row[dateToIdx]) : new Date()
+					dateFrom: dayjs(row[dateFromIdx]),
+					dateTo: row[dateToIdx] !== 'NULL' ? dayjs(row[dateToIdx]) : dayjs()
 				}
 			})
 

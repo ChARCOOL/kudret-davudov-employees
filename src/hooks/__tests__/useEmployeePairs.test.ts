@@ -1,5 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks'
 import useEmployeePairs from '../useEmployeePairs'
+import dayjs from 'dayjs'
 
 describe('useEmployeePairs', () => {
 	it('should return an empty array when no projects are provided', () => {
@@ -13,14 +14,14 @@ describe('useEmployeePairs', () => {
 			{
 				projectID: 1,
 				empID: 1,
-				dateFrom: new Date('2021-01-01'),
-				dateTo: new Date('2021-01-31')
+				dateFrom: dayjs('2021-01-01'),
+				dateTo: dayjs('2021-01-31')
 			},
 			{
 				projectID: 2,
 				empID: 2,
-				dateFrom: new Date('2021-02-01'),
-				dateTo: new Date('2021-02-28')
+				dateFrom: dayjs('2021-02-01'),
+				dateTo: dayjs('2021-02-28')
 			}
 		]
 
@@ -34,26 +35,26 @@ describe('useEmployeePairs', () => {
 			{
 				projectID: 1,
 				empID: 1,
-				dateFrom: new Date('2021-01-01'),
-				dateTo: new Date('2021-01-31')
+				dateFrom: dayjs('2021-01-01'),
+				dateTo: dayjs('2021-01-31')
 			},
 			{
 				projectID: 1,
 				empID: 2,
-				dateFrom: new Date('2021-01-15'),
-				dateTo: new Date('2021-02-15')
+				dateFrom: dayjs('2021-01-15'),
+				dateTo: dayjs('2021-02-15')
 			},
 			{
 				projectID: 2,
 				empID: 1,
-				dateFrom: new Date('2021-02-01'),
-				dateTo: new Date('2021-02-28')
+				dateFrom: dayjs('2021-02-01'),
+				dateTo: dayjs('2021-02-28')
 			},
 			{
 				projectID: 2,
 				empID: 2,
-				dateFrom: new Date('2021-02-15'),
-				dateTo: new Date('2021-03-15')
+				dateFrom: dayjs('2021-02-15'),
+				dateTo: dayjs('2021-03-15')
 			}
 		]
 

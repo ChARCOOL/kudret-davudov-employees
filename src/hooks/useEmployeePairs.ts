@@ -44,9 +44,9 @@ const useEmployeePairs = (projects: Project[]) => {
 
 			const filteredProjects = employeeList.filter((employee) => {
 				const otherEmpIdProjects = employeeList.filter((other) => other !== employee)
-				const smallestDateFrom = Math.min(...otherEmpIdProjects.map((other) => other.dateFrom.getTime()))
+				const smallestDateFrom = Math.min(...otherEmpIdProjects.map((other) => +other.dateFrom))
 
-				return employee.dateTo.getTime() > smallestDateFrom
+				return +employee.dateTo > smallestDateFrom
 			})
 
 			// Remove project if there are less than 2 filtered projects
@@ -63,10 +63,10 @@ const useEmployeePairs = (projects: Project[]) => {
 
 			projectList.forEach((project1, idx) => {
 				projectList.slice(idx + 1).forEach((project2) => {
-					const start1 = project1.dateFrom.getTime()
-					const end1 = project1.dateTo.getTime()
-					const start2 = project2.dateFrom.getTime()
-					const end2 = project2.dateTo.getTime()
+					const start1 = +project1.dateFrom
+					const end1 = +project1.dateTo
+					const start2 = +project2.dateFrom
+					const end2 = +project2.dateTo
 
 					if (end1 < start2 || end2 < start1) {
 						return
