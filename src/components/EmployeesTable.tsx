@@ -19,7 +19,8 @@ const EmployeesTable = () => {
 
 	return (
 		<Wrapper>
-			{rows.length === 0 && <NoDataText>No data</NoDataText>}
+			{projects.length === 0 && <NoDataText>No data provided</NoDataText>}
+			{projects.length > 1 && rows.length === 0 && <NoDataText>No employee pairs found</NoDataText>}
 			{rows.length > 0 && <StyledDataGrid rowSelection={false} rows={rows} columns={columns} />}
 		</Wrapper>
 	)
